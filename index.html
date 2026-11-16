@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
-    <script src="../js/app.js" defer></script>
+    <script src="./js/app.js" defer></script>
     <title>Reposición</title>
 </head>
 <body>
@@ -49,9 +49,76 @@
             </div>
         </div>
 
-        <div class="boton_reposicion">
-            <p>Programar reposición</p>
-        </div>
+        <button type="button" class="boton_reposicion">
+            Programar reposición
+        </button>
+
+
+        <main class="gestion-reposiciones">
+
+            <h2>Gestión de reposiciones</h2>
+            <p>Registra y administra las reposiciones de postres.</p>
+
+            <!-- Formulario de registro -->
+            <section class="panel-gestion">
+                <h3>Nueva reposición</h3>
+
+                <form id="form-reposicion" novalidate>
+
+                    <label for="producto">Producto</label>
+                    <input
+                        type="text"
+                        id="producto"
+                        placeholder="Ej. Pistacho cremoso"
+                        required
+                    >
+                    <small id="error-producto" class="error"></small>
+
+                    <label for="cantidad">Cantidad a reponer</label>
+                    <input
+                        type="number"
+                        id="cantidad"
+                        min="1"
+                        step="1"
+                        placeholder="Ej. 20"
+                        required
+                    >
+                    <small id="error-cantidad" class="error"></small>
+
+                    <label for="responsable">Responsable</label>
+                    <input
+                        type="text"
+                        id="responsable"
+                        placeholder="Nombre del responsable"
+                        required
+                    >
+                    <small id="error-responsable" class="error"></small>
+
+                    <button type="submit">
+                        Registrar reposición
+                    </button>
+
+                </form>
+            </section>
+
+            <!-- Búsqueda y registros -->
+            <section class="panel-gestion">
+                <h3>Reposiciones registradas</h3>
+
+                <label for="buscar">Buscar por producto</label>
+                <input
+                    type="search"
+                    id="buscar"
+                    placeholder="Buscar reposición..."
+                >
+
+                <p id="contador">Total de reposiciones: 0</p>
+
+                <div id="lista-reposiciones"></div>
+            </section>
+
+        </main>
+
     </article>
 
 </body>
