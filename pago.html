@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pago</title>
+    <link rel="stylesheet" href="./styles/pago.css">
+</head>
+<body>
+
+    <main class="pago">
+        <h3>Realizar pago</h3>
+        <p>Completa los datos para continuar con tu compra.</p>
+
+        <form>
+            <label for="tarjeta">Número de tarjeta</label>
+            <input
+                type="text"
+                id="tarjeta"
+                name="tarjeta"
+                placeholder="1234 5678 9012 3456"
+                inputmode="numeric"
+                pattern="[0-9 ]{16,19}"
+                maxlength="19"
+                required
+                title="Ingresa un número de tarjeta de 16 dígitos."
+            >
+            <button type="submit">Confirmar pago</button>
+        </form>
+    </main>
+    <script src="./js/pago.js"></script>
+</body>
+</html>
